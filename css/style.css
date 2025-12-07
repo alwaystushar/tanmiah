@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+
+* {
+  font-family: "Gotham", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  
+}
+
+  *::-webkit-scrollbar {
+    width: 1px;
+    background: #F4F6F8; 
+  }
+*::-webkit-scrollbar-thumb {
+    background: #12B886;       /* your --green variable hex color */
+    border-radius: 4px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: #0C866B;
+  }
+
+
+
+   html {
+      scroll-behavior: smooth;
+    }
+
+#dotNav.menu-open {
+  width: 200px !important;
+}
+
+body{
+
+
+}
+
+
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fadeIn { animation: fadeIn 0.2s ease-out; }
+
+:root {
+  --yellow: #DFA21C;
+  --green: #036738;
+  --lightgreen: #00A058;
+  --lightbg: #d9d9d927;
+  --darkbg: #979797;
+  --text: #525253;
+}
+
+.arabic
+{
+      font-family: "Tajawal";
+}
+
+
+/* Tailwind - hide scrollbars */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+ .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scroll-snap-x {
+        scroll-snap-type: x mandatory;
+      }
+
+      .snap-start {
+        scroll-snap-align: start;
+      }
+ 
+ 
+  .nav-label {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .nav-label.visible {
+    opacity: 1;
+  }
+
+
+ /* Smooth transition for each path in the icon */
+  #menuIcon path {
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: 12px 12px; /* Center of the 24x24 SVG viewBox */
+  }
+
+  /* Animate top line down and rotate to form part of X */
+  #toggleBtn.menu-open #line1 {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  /* Hide the middle line */
+  #toggleBtn.menu-open #line2 {
+    opacity: 0;
+  }
+
+  /* Animate bottom line up and rotate to form other half of X */
+  #toggleBtn.menu-open #line3 {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+
+    /* Custom 1px modern scrollbar for #dotNav */
+  #dotNav {
+    scrollbar-width: thin;         /* For Firefox: makes scrollbar thin */
+    scrollbar-color: #12B886 #F4F6F8; /* For Firefox: track and thumb color */
+  }
+  /* For Webkit browsers (Chrome, Edge, Safari) */
+  #dotNav::-webkit-scrollbar {
+    width: 1px;
+    background: #F4F6F8; 
+  }
+  #dotNav::-webkit-scrollbar-thumb {
+    background: #12B886;       /* your --green variable hex color */
+    border-radius: 4px;
+  }
+  #dotNav::-webkit-scrollbar-thumb:hover {
+    background: #0C866B;
+  }
+
+  .custom-next,
+.custom-prev {
+  top: 50px;
+}
+
+    .underlineanime {
+      position: relative;
+      display: inline-block; /* Necessary for absolute positioning of :after */
+      cursor: pointer;
+    }
+    .underlineanime:after {    
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      width: 0;
+      height: 1px;
+      background: var(--yellow);
+      transition: width 0.3s ease, left 0.3s ease;
+      display: block;
+    }
+    .underlineanime:hover:after {
+      width: 100%;
+      left: 0;
+    }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.fade-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease-out;
+}
+
+
+.fade-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.progress-tooltip {
+  pointer-events: none; /* so it doesn’t block cursor */
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+
+
+

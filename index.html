@@ -1,0 +1,2739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanmiah | Home</title>
+
+
+
+
+  <link rel="icon" type="image/x-icon" href="src/logo.png">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font/stylesheet.css">
+  <link rel="stylesheet" href="arabic-font/stylesheet.css">
+</head>
+
+<body class="">
+  
+
+  <!-- Sidebar -->
+  <div id="sidebar"
+class="fixed top-0 left-0 h-full gap-8 bg-[#FBFBFB] max-sm:bg-transparent z-50 w-20 transition-all duration-300 flex flex-col items-start justify-between max-sm:h-fit">
+    <!-- Toggle Button -->
+    <!-- Button with SVG -->
+    <button id="toggleBtn" class="relative flex items-center justify-center w-10 h-10 mt-4 ml-4">
+      <svg id="menuIcon" viewBox="0 0 24 24" class="w-8 h-8 text-[var(--yellow)]">
+        <g>
+          <path id="line1" d="M4 6h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path id="line2" d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path id="line3" d="M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </g>
+      </svg>
+    </button>
+
+
+    <!-- Navigation Dots + Labels -->
+    <div id="dotNav" class="flex flex-col w-5 px-2 mt-12 ml-4 space-y-4 transition-all duration-300 max-sm:hidden"
+      style="max-height: 100vh; overflow-y: auto; width: 200px;">
+
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="0">
+        <span class="w-3 h-3 rounded-full bg-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start">Overview</span>
+      </button>
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="1">
+        <span class="w-3 h-3 rounded-full border border-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start">About Us</span>
+      </button>
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="2">
+        <span class="w-3 h-3 rounded-full border border-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start"> Governance</span>
+      </button>
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="3">
+        <span class="w-3 h-3 rounded-full border border-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start"> People </span>
+      </button>
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="4">
+        <span class="w-3 h-3 rounded-full border border-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start"> Agriculture </span>
+      </button>
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="5">
+        <span class="w-3 h-3 rounded-full border border-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start">Planet</span>
+      </button>
+
+      <button class="flex items-center gap-3 text-[var(--green)] w-full focus:outline-none" data-index="6">
+        <span class="w-3 h-3 rounded-full border border-[var(--green)] shrink-0 transition-all duration-300"></span>
+        <span class="hidden text-xl nav-label text-start">Downloads</span>
+      </button>
+
+    </div>
+
+    <!-- Arrows -->
+    <div id="navigation" class="flex flex-col gap-2 mb-6 ml-4 max-sm:hidden">
+      <button id="upBtn"
+        class="border border-[var(--green)] p-2 hover:bg-[var(--green)] hover:text-white text-[var(--green)] transform duration-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+      <button id="downBtn"
+        class="border border-[var(--green)] p-2 hover:bg-[var(--green)] hover:text-white text-[var(--green)] transform duration-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Top Header -->
+  <header class="py-6 ml-20 ">
+    <div class="container flex items-center justify-between px-6 pl-0 m-auto lg:px-8">
+      <div class="flex items-center w-1/2 gap-16 max-sm:gap-4 lg:w-full">
+        <img src="src/logo.svg" class="hidden h-12 lg:block" alt="Logo">
+        <img src="src/short_logo.svg" class="h-12 lg:hidden" alt="Logo">
+        <div class="">
+          <span class="text-lg font-medium text-[var(--green)]">Sustainability Report 2024</span>
+        </div>
+        
+      </div>
+      <div class="flex items-center justify-center gap-8 text-sm font-medium text-black whitespace-nowrap">
+        <a href="pdf/Tanmiah_Sustainability_Report_2024.pdf" target="_blank" class="flex items-center gap-2 max-sm:hidden">
+          <div class="underlineanime ">
+            Download Full Report
+
+          </div>
+
+          <img src="src/down.svg" class="h-4" alt="">
+        </a>
+        <a href="#" id="shareBtn" class="flex items-center gap-2 max-sm:hidden">
+          <div class="underlineanime">
+            Share
+          </div>
+          <img src="src/mail.svg" class="h-3" alt="">
+        </a>
+        <a href="tanmiah-ar.html" class="flex gap-2 text-[var(--yellow)] text-lg arabic">العربية</a>
+      </div>
+    </div>
+  </header>
+
+
+<!-- Popup (hidden by default) -->
+<div id="sharePopup"
+     class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/50">
+  <div class="relative p-6 bg-white rounded-lg shadow-xl w-80 animate-fadeIn">
+    
+    <!-- Close Button -->
+    <button id="closePopup" 
+            class="absolute top-3 right-3 text-gray-400 hover:text-[var(--green)]">
+      ✕
+    </button>
+
+    <!-- Title -->
+    <h3 class="text-lg font-semibold text-[var(--green)] mb-4">Share this page</h3>
+
+    <!-- Share Options -->
+    <div class="space-y-3">
+      <a href="https://wa.me/?text=Check%20this%20out:%20www.tanmiah.com"
+         target="_blank"
+         class="flex items-center gap-3 p-2 rounded-lg hover:bg-[var(--lightgreen)]/10 transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg"
+             class="w-5 h-5" style="color:var(--lightgreen)" alt="WhatsApp">
+        <span class="text-gray-700">WhatsApp</span>
+      </a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=www.tanmiah.com"
+         target="_blank"
+         class="flex items-center gap-3 p-2 rounded-lg hover:bg-[var(--yellow)]/10 transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+             class="w-5 h-5" style="color:var(--yellow)" alt="Facebook">
+        <span class="text-gray-700">Facebook</span>
+      </a>
+
+      <a href="https://twitter.com/intent/tweet?url=www.tanmiah.com&text=Check%20this%20out!"
+         target="_blank"
+         class="flex items-center gap-3 p-2 rounded-lg hover:bg-[var(--green)]/10 transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg"
+             class="w-5 h-5" style="color:var(--green)" alt="Twitter/X">
+        <span class="text-gray-700">Twitter / X</span>
+      </a>
+
+      <a href="mailto:?subject=Check%20this%20out&body=Here%20is%20a%20link:%20www.tanmiah.com"
+         target="_blank"
+         class="flex items-center gap-3 p-2 rounded-lg hover:bg-[var(--yellow)]/10 transition">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg"
+             class="w-5 h-5" style="color:var(--yellow)" alt="Email">
+        <span class="text-gray-700">Email</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- Scrollable Main Content -->
+  <div id="scrollContainer" class="ml-16 max-sm:ml-0 overflow-y-auto h-[calc(100vh-7rem)] snap-y snap-mandatory scroll-smooth">
+    <section id="section0">
+
+
+      <!-- Section 1 -->
+      <div class=" bg-[url('src/heroimage.png')] px-10 py-24 max-sm:pb-8 bg-cover bg-center text-white flex   ">
+        <div class="container flex justify-center flex-1 gap-20 m-auto lg:flex-row max-sm:flex-col lg:px-8">
+
+          <div class="">
+            <h1 class="mb-4 text-5xl font-medium leading-tight fade-up">Sustainability<br>
+              Report
+            </h1>
+
+            <div class="flex gap-3 fade-up">
+              <p class="text-5xl font-medium text-white"> 2024</p>
+              <img src="src/candle.svg" class="h-11 " alt="">
+            </div>
+
+            <p class="w-56 max-w-md mt-6 mb-6 text-lg text-white fade-up">This report
+highlights our
+progress towards
+our vision and Saudi
+vision 2030.</p>
+            <a href="#section1" class="text-[var(--yellow)] font-semibold inline-flex items-center  fade-up">
+              <div class="underlineanime">
+                READ MORE
+              </div>
+
+              <img src="src/arrowdown.svg" class="ml-2" alt="">
+            </a>
+          </div>
+
+          <div class="flex flex-col items-center justify-end gap-12">
+            <!-- <img src="src/herotopimg.png" class="fade-up" alt=""> -->
+            <!-- <p class="text-2xl max-sm:text-base fade-up">
+              Innovation with Passion
+            </p> -->
+<div class="pt-10 pr-6 text-white lg:pl-0 max-sm:px-0">
+  <div class="container flex flex-col items-end justify-start gap-6 mx-auto md:flex-row md:items-center max-sm:items-start md:gap-10">
+    
+    <!-- Column 1 -->
+    <div class="flex justify-end text-sm leading-snug w-fit">
+      <p class="text-[10px] lg:w-1/2 md:w-full max-sm:text-2xl">
+        We ensured transparency with limited assurance from KPMG and mapped metrics to GRI and SASB standards
+      </p>
+    </div>
+
+    <!-- Divider (always visible, responsive) -->
+    <div class="w-full h-px md:h-12 md:w-px bg-white/50"></div>
+
+
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 lg:w-[382px] md:w-full">
+    <!-- Column 2 -->
+    <div class="flex-1 text-[8px] leading-relaxed max-sm:text-sm">
+      <p>Reduced landfill waste by 12.73%
+      Decreased petrol consumption by 24.6%</p>
+    </div>
+
+
+    <!-- Column 3 -->
+    <div class="flex-1 text-[8px] leading-relaxed max-sm:text-sm">
+      <p>Maintained water intensity at 0.80 ML/MSAR
+      Recycled 876 million liters of water</p>
+    </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+      </div>
+
+      <!-- Section 2 -->
+      <!-- <div class=" lg:px-10" >
+        <div class="container flex flex-col items-start justify-center h-full px-8 m-auto lg:py-24 max-sm:py-16">
+          <div class="flex flex-wrap items-end justify-start lg:gap-10 max-sm:gap-6 mb-14 fade-up" >
+            <h2 class="text-4xl text-[var(--green)] ">Financial Highlights</h2>
+            <a href="#" class="pb-1 text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+          </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Revenue</div>
+              <div class="text-4xl ">£206.4m</div>
+            </div>
+
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Organic revenue growth</div>
+              <div class="text-4xl ">13%</div>
+            </div>
+
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Adjusted EBITDA</div>
+              <div class="text-4xl ">£56.4m</div>
+            </div>
+
+          
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Organic Adjusted EBITDA growth</div>
+              <div class="text-4xl">17%</div>
+            </div>
+
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Reported operating profit</div>
+              <div class="text-4xl">£30.7m</div>
+            </div>
+
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Adjusted operating profit</div>
+              <div class="text-4xl">£51.5m</div>
+            </div>
+
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Diluted EPS</div>
+              <div class="text-4xl">1.3p</div>
+            </div>
+
+            
+            <div class="w-[375px] p-6 max-sm:w-full fade-up">
+              <div class="mb-1 text-sm">Adjusted diluted EPS</div>
+              <div class="text-4xl">5.1p</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+
+    </section>
+
+
+    <section id="section1">
+
+      <!-- <img src="src/about.png" class="" alt=""> -->
+
+
+
+
+      <div class="   lg:px-10 bg-[var(--lightbg)]">
+        <div class="container flex flex-col items-start justify-center h-full px-8 m-auto lg:py-24 max-sm:py-16">
+
+          <div class="flex flex-wrap items-end justify-start lg:gap-10 max-sm:gap-6 mb-14 fade-up">
+            <h2 class="text-4xl text-[var(--green)]   leading-snug">Our Strategic <br>
+              Sustainability Focus</h2>
+          </div>
+
+          <div class="flex flex-wrap grid-cols-3 gap-6 lg:grid ">
+
+            <!-- Card 1 -->
+            <div class="flex flex-col gap-9 items-start  bg-[var(--yellow)] p-6 fade-up">
+              <!-- Left content -->
+              <div class="flex gap-3 max-sm:flex-col">
+                <div class="flex flex-col gap-3">
+                  <h3 class="text-4xl leading-snug text-white">Sustaining <br>
+                    People</h3>
+                </div>
+                <!-- Right image -->
+                <div class="ml-4">
+                  <img src="src/card1.png" alt="Circle" class="max-w-[150px] w-full rounded-full object-cover" />
+                </div>
+              </div>
+              <p class="text-white">
+                Our colleagues and communities are at the heart
+                of our operations. To empower them, we have
+                commitments towards investments in talent
+                development, diversity, equity, and inclusion
+                initiatives, as well as our emphasis on health,
+                safety, and adherence to local and international
+                regulations.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex flex-col gap-9 items-start bg-[var(--green)] p-6 fade-up">
+              <!-- Left content -->
+              <div class="flex gap-3 max-sm:flex-col">
+                <div class="flex flex-col gap-3">
+                  <h3 class="text-4xl leading-snug text-white">Sustaining <br>
+                    Agriculture</h3>
+                </div>
+                <!-- Right image -->
+                <div class="ml-4">
+                  <img src="src/card2.png" alt="Circle" class="max-w-[150px] w-full rounded-full object-cover" />
+                </div>
+              </div>
+              <p class="text-white">
+                Ensuring the highest standards of animal welfare and
+                sustainable resource utilization is paramount to us. Our
+                comprehensive efforts include implementing rigorous
+                animal welfare and biosecurity measures—supported
+                by automated monitoring systems for real-time health
+                tracking. We also engage in afforestation initiatives,
+                promote sustainable, precision-driven feed production,
+                and enhance resource efficiency through automated
+                resource management tools
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex flex-col gap-9  items-start bg-[var(--darkbg)] p-6 fade-up">
+              <!-- Left content -->
+              <div class="flex gap-3 max-sm:flex-col">
+                <div class="flex flex-col gap-3">
+                  <h3 class="text-4xl leading-snug text-white">Sustaining <br>
+                    Planet</h3>
+                </div>
+                <!-- Right image -->
+                <div class="ml-4">
+                  <img src="src/card3.png" alt="Circle" class="max-w-[150px] w-full rounded-full object-cover" />
+                </div>
+              </div>
+              <p class="text-white">
+                We strive to take a carbon-neutral approach across
+                all our activities. This commitment translates into
+                actions that address climate change by promoting
+                energy efficiency, waste to value initiatives, and
+                sustainable packaging solutions.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Section 4 -->
+<div class="relative overflow-hidden bg-[var(--green)]">
+  <div class="container relative px-4 mx-auto overflow-x-hidden sm:px-8 lg:py-48 max-sm:py-16">
+
+    <!-- Slider Wrapper -->
+    <div id="slider" class="flex w-full overflow-hidden scroll-smooth snap-x snap-mandatory">
+      <div id="slides" class="flex w-[200%]">
+
+        <!-- Slide 1 -->
+        <div class="flex-shrink-0 w-full slide snap-start">
+          <div class="flex flex-col items-start gap-8 lg:flex-row sm:gap-12 max-sm:pl-10">
+            
+            <!-- Image -->
+            <img src="src/review.png"
+              class="max-h-80 max-w-full w-full sm:w-auto max-sm:w-[185px] border-b-[8px] sm:border-b-[12px] border-b-[var(--yellow)] object-cover"
+              alt="Executive" />
+
+            <!-- Text Content -->
+            <div class="flex flex-col">
+              <!-- Heading & Button -->
+              <div class="flex flex-wrap items-center justify-start gap-4 mb-6 lg:gap-10 sm:mb-14 fade-up">
+                <h2 class="text-2xl sm:text-4xl text-[var(--yellow)]">Message from our CEO</h2>
+                <!-- <a href="pdf/CEO_Statements.pdf" target="_blank"
+                  class="text-xs font-medium text-white sm:text-sm underlineanime">DOWNLOAD PDF</a> -->
+              </div>
+
+              <!-- Quote & Name -->
+              <div class="flex flex-col items-start max-w-full sm:max-w-[800px] fade-up">
+                <img src="src/para.svg" class="h-8 mb-6 sm:h-12 sm:mb-8" alt="Quote" />
+                <p class="text-lg leading-snug text-white sm:text-3xl sm:max-w-3xl">
+                  Our objective is not to follow prevailing trends but to define what sustainable,
+                  ethical, & resilient food production entails in Saudi Arabia and beyond.
+                </p>
+                <p class="text-[var(--yellow)] font-medium text-base sm:text-xl mt-4">SYED ZULFIQAR HAMADANI</p>
+                <p class="text-white text-xs sm:text-sm mt-2.5">Chief Executive</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="flex-shrink-0 w-full slide snap-start">
+          <div class="flex flex-col items-start gap-8 lg:flex-row sm:gap-12 max-sm:pl-10">
+            
+            <!-- Image -->
+            <img src="src/review2.png"
+              class="max-h-80 max-w-full w-full sm:w-auto max-sm:w-[185px] border-b-[8px] sm:border-b-[12px] border-b-[var(--yellow)] object-cover"
+              alt="Chairman" />
+
+            <!-- Text Content -->
+            <div class="flex flex-col">
+              <div class="flex flex-wrap items-center justify-start gap-4 mb-6 lg:gap-10 sm:mb-14 fade-up">
+                <h2 class="text-2xl sm:text-4xl text-[var(--yellow)]">Message from our Chairman</h2>
+                <!-- <a href="pdf/CEO_Statements.pdf" target="_blank"
+                  class="text-xs font-medium text-white sm:text-sm underlineanime">DOWNLOAD PDF</a> -->
+              </div>
+              <div class="flex flex-col items-start max-w-full sm:max-w-[800px] fade-up">
+                <img src="src/para.svg" class="h-8 mb-6 sm:h-12 sm:mb-8" alt="Quote" />
+                <p class="text-lg leading-snug text-white sm:text-3xl sm:max-w-3xl">
+                  Sustainability constitutes one of the three fundamental pillars of our distinctive,
+                  home-grown philosophy known as Omnipreneurship.
+                </p>
+                <p class="text-[var(--yellow)] font-medium text-base sm:text-xl mt-4">H.E. Amr Al-Dabbagh</p>
+                <p class="text-white text-xs sm:text-sm mt-2.5">Chairman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button onclick="scrollSlider(1)"
+      class="absolute p-2 text-white transform -translate-y-1/2 rounded-full top-1/2 right-2 sm:right-4 bg-white/20 hover:bg-white/40 sm:p-3 fade-up">
+      <img src="src/next.svg" alt="Next" class="w-4 sm:w-6">
+    </button>
+  </div>
+</div>
+
+
+
+
+
+    </section>
+
+    <section id="section2">
+
+
+      <!-- this part -->
+
+
+
+
+
+      <!-- Swiper Container -->
+      <div class="container flex flex-col items-start justify-center h-full px-8 m-auto swiper mySwiper lg:py-24 max-sm:py-16">
+        <div class="swiper-wrapper ">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="">
+
+              <div class="flex flex-col items-start justify-start mb-9 fade-up">
+                <div class="flex flex-wrap items-end justify-start lg:gap-10 max-sm:gap-6 mb-9 fade-up">
+                  <h2 class="text-4xl text-[var(--green)]  leading-snug">Our Balanced Leadership</h2>
+                  <a href="pdf/Tanmiah_Our_Governance.pdf" target="_blank"
+                    class="text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+                </div>
+
+                <p class="text-xl max-w-[556px]">Five of our Board Directors are Non-Executive Directors and Five are
+                  independent members.</p>
+              </div>
+
+              <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-1 ">
+
+                <!-- Card 1 -->
+                <div class="flex flex-col gap-28 items-start bg-[var(--yellow)] p-8 fade-up">
+                  <!-- Left content -->
+                  <div class="flex flex-row gap-3 max-sm:flex-col">
+                    <div class="flex flex-col gap-3">
+                      <h3 class="text-3xl   leading-snug text-white max-w-[200px]">Female Representation at
+                        Board
+                      </h3>
+                    </div>
+                    <!-- Right image -->
+                    <div class="ml-4 ">
+                      <img src="src/leadership1.png" alt="Circle"
+                        class="relative object-cover w-full rounded-full max-w-56 top-1/3" />
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-start gap-6">
+                    <p class="text-white text-7xl counter" data-count="10"  data-after="%">
+                      0
+                    </p>
+                        <div class="chart"
+         data-percent="10"
+         data-color="var(--green)"
+         data-label="false"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="95">
+    </div>
+            
+                  </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flex flex-col gap-28 items-start bg-[var(--green)] p-8 fade-up">
+                  <!-- Left content -->
+                  <div class="flex gap-3 max-sm:flex-col">
+                    <div class="flex flex-col gap-3">
+                      <h3 class="text-3xl   leading-snug text-white max-w-[200px]">Independent
+                        Board
+                        Members</h3>
+                    </div>
+                    <!-- Right image -->
+                    <div class="ml-4">
+                      <img src="src/leadership2.png" alt="Circle"
+                        class="relative object-cover w-full rounded-full max-w-56 top-1/3" />
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-start gap-6">
+                    <p class="text-white text-7xl counter" data-count="50"  data-after="%">
+                    0</p>
+                                            <div class="chart"
+         data-percent="50"
+         data-color="var(--yellow)"
+         data-label="false"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="95">
+    </div>
+            
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flex flex-col gap-28 items-start bg-[var(--darkbg)] p-8 fade-up">
+                  <!-- Left content -->
+                  <div class="flex gap-3 max-sm:flex-col">
+                    <div class="flex flex-col gap-3">
+                      <h3 class="text-3xl   leading-snug text-white max-w-[200px]">Non-Executive
+                        Board
+                        Members</h3>
+                    </div>
+                    <!-- Right image -->
+                    <div class="ml-4">
+                      <img src="src/leadership3.png" alt="Circle"
+                        class="relative object-cover w-full rounded-full max-w-56 top-1/3" />
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-start gap-6">
+                    <p class="text-white text-7xl counter" data-count="50"  data-after="%">
+                      0
+                    </p>
+                    <div class="chart"
+         data-percent="50"
+         data-color="var(--green)"
+         data-label="false"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="95">
+    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class=" lg:px-10">
+              <div
+                class="">
+                <div class="flex flex-wrap items-end justify-start mb-8 lg:gap-10 max-sm:gap-6 fade-up">
+                  <h2 class="text-4xl text-[var(--green)] ">Managing Our Sustainability Matters</h2>
+                  <a href="pdf/Managing_Our_Sustainability_Matters.pdf" target="_blank"
+                    class="pb-2 text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+                </div>
+                <div class="flex flex-col gap-12 mx-auto lg:flex-row">
+
+                  <!-- Left Text Section -->
+                  <div class="space-y-6 lg:w-2/3 fade-up">
+                    <h2 class="text-2xl text-green-700">Oversight and Implementation</h2>
+                    <div class="w-full h-px my-8 bg-gray-300"></div>
+                    <div class="flex gap-3">
+                      <p>•</p>
+                      <p>
+                        Sustainability and responsible business performance are consistently included in the
+                        <strong>Board’s
+                          agenda</strong>,
+                        ensuring these topics receive thorough and ongoing attention.
+                      </p>
+                    </div>
+
+                    <div class="w-full h-px my-8 bg-gray-300"></div>
+                    <p>
+                    <div class="flex gap-3">
+                      <p>•</p>
+                      <p>
+                        Detailed reports covering KPIs, progress against sustainability targets, risk management
+                        updates, and
+                        material
+                        developments are submitted <strong>quarterly</strong>.
+                      </p>
+                    </div>
+                    <div class="flex gap-3">
+                      <p>•</p>
+                      <p>
+                        An <strong>annual sustainability report</strong> provides a comprehensive review of
+                        sustainability
+                        performance and
+                        strategic alignment.<br />
+                      </p>
+                    </div>
+
+                    <div class="flex gap-3">
+                      <p>•</p>
+                      <p>
+                        Emerging or critical issues are promptly escalated to the Board for immediate attention as part
+                        of
+                        <strong>Ad Hoc
+                          Reporting</strong>.
+                      </p>
+                    </div>
+
+
+                    </p>
+                    <div class="w-full h-px my-8 bg-gray-300"></div>
+
+
+                    <div class="flex gap-3">
+                      <p>•</p>
+                      <p>
+                        <strong>Strong collaboration</strong> exists between the corporate strategy team and the
+                        business
+                        units
+                        to ensure strategic
+                        decisions are translated into operational actions, maintaining accountability at all levels.
+                      </p>
+                    </div>
+
+                    <div class="w-full h-px my-8 bg-gray-300"></div>
+                    <div class="flex gap-3">
+                      <p>•</p>
+                      <p>
+                        The main responsibility of the management cross-functional <strong>ESG Committee</strong> is to
+                        implement the strategy
+                        directives and translate them into operational actions. The committee also oversees
+                        sustainability
+                        projects like water
+                        management and environmental initiatives.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Right Pyramid Section -->
+                  <div class="flex flex-col items-center gap-4 mt-10 lg:gap-6 lg:mt-0">
+
+
+                    <div>
+                      <img src="src/cone.png" class="fade-up" alt="">
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="absolute z-10 -translate-x-1/2 -translate-y-1/2 swiper-next custom-next right-5 fade-up">
+          <img src="src/nextgreen.svg" alt="Next" class="max-w-12 max-h-12" />
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Section 7 -->
+
+
+
+
+
+    </section>
+
+    <section id="section3">
+
+
+
+      <div class="bg-[var(--lightbg)]    ">
+        <div class="container mx-auto px-10  lg:py-24 max-sm:py-16 max-sm:px-1.5 ">
+
+
+
+
+          <div class="relative w-full swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide max-sm:ml-7 ">
+                <!-- Heading and Download -->
+                <div class="flex flex-wrap items-end justify-start lg:gap-10 max-sm:gap-6 mb-14 fade-up">
+                  <h2 class="text-4xl text-[var(--green)]  ">Our Workforce</h2>
+                  <a href="pdf/Tanmiah_Sustaining_People.pdf" target="_blank"
+                    class="pb-2 text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+                </div>
+
+                <!-- Workforce Content -->
+                <div class="grid items-start grid-cols-1 md:grid-cols-3 lg:gap-10 max-sm:gap-6 max-sm:mb-14 ">
+                  <!-- Left Section (2 Rows) -->
+                  <div class="col-span-2 space-y-8">
+                    <!-- Row 1 -->
+                    <div class="flex flex-row items-start max-sm:flex-col lg:gap-32 max-sm:gap-6 fade-up">
+                      <img src="src/women.svg" alt="female" class="w-24 h-24">
+                      <div class="flex flex-col gap-20 md:flex-row md:items-center">
+                        <!-- 2023 -->
+                        <div>
+                          <div class="flex items-center justify-between gap-4 mb-4 lg:flex-row lg:gap-24">
+                            <p class="text-[var(--yellow)] text-6xl counter" data-count="278">0</p>
+                            <p class="text-[var(--yellow)] text-2xl counter" data-count="8.6"  data-after="%">8.6%</p>
+                          </div>
+                          <hr class="mb-3 border-gray-400">
+
+                          <div class="flex items-center gap-4 mb-4 lg:flex-row lg:gap-24">
+                            <p class="mt-1 text-gray-700">Total Female full-time<br>colleagues</p>
+                            <p class="mt-1 text-sm font-medium text-gray-600 counter" data-count="2023" >0</p>
+                          </div>
+
+                        </div>
+                        <!-- 2024 -->
+                        <div>
+                          <div>
+                            <div class="flex items-center justify-between gap-4 mb-4 lg:flex-row lg:gap-24">
+                              <p class="text-[var(--green)] text-6xl counter" data-count="337">0</p>
+                              <p class="text-[var(--green)] text-2xl counter" data-count="9.5" data-after="%">9.5%</p>
+                            </div>
+                            <hr class="mb-3 border-gray-400">
+
+                            <div class="flex items-center gap-4 mb-4 lg:flex-row lg:gap-24">
+                              <p class="mt-1 text-gray-700">Total Female full-time<br>colleagues</p>
+                              <p class="mt-1 text-sm font-medium text-gray-600 counter" data-count="2024">0</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex flex-row items-start gap-5 max-sm:flex-col lg:gap-32 fade-up">
+                      <img src="src/men.svg" alt="male" class="w-24 h-24">
+                      <div class="flex flex-col gap-20 md:flex-row md:items-center">
+                        <!-- 2023 -->
+                        <div class="max-w-[303px]">
+                          <div class="flex items-center justify-between gap-4 mb-4 lg:flex-row lg:gap-24">
+                            <p class="text-[var(--yellow)] text-6xl counter" data-count="3231">0</p>
+                            <p class="text-[var(--yellow)] text-2xl counter" data-count="90.5" data-after="%">0</p>
+                          </div>
+                          <hr class="mb-3 border-gray-400">
+
+                          <div class="flex items-center justify-between gap-4 mb-4 lg:flex-row lg:gap-24">
+                            <p class="mt-1 text-gray-700">Total Male full-time<br>colleagues</p>
+                            <p class="mt-1 text-sm font-medium text-gray-600 counter" data-count="2023">0</p>
+                          </div>
+
+                        </div>
+                        <!-- 2024 -->
+                        <div>
+                          <div class="max-w-[303px]">
+                            <div class="flex items-center justify-between gap-4 mb-4 lg:flex-row lg:gap-20">
+                              <p class="text-[var(--green)] text-6xl counter" data-count="2953">0</p>
+                              <p class="text-[var(--green)] text-2xl counter" data-count="91.4" data-after="%">0</p>
+                            </div>
+                            <hr class="mb-3 border-gray-400">
+
+                            <div class="flex items-center justify-between gap-4 mb-4 lg:flex-row lg:gap-24">
+                              <p class="mt-1 text-gray-700">Total Male full-time<br>colleagues</p>
+                              <p class="mt-1 text-sm font-medium text-gray-600 counter" data-count="2024">0</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right Section (Chart Card) -->
+                  <div class="flex justify-center">
+                    <div class="bg-green-900 max-w-[278px] text-center text-white rounded-xl p-6 max-sm:p-4 fade-up">
+                      <h3 class="text-[var(--yellow)] font-medium text-lg">Nitaqat Program or
+                        Saudi Workforce
+                        Localization at
+                        Tanmiah</h3>
+                      <!-- Donut Circle -->
+                                                                  <div class="chart"
+         data-percent="21.6"
+         data-text-color="#ffffff"
+         data-color="var(--green)"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230">
+    </div>
+                      <p class="text-xs leading-snug">21.6% of our workforce is <br class="max-sm:hidden"> comprised
+                        of Saudi
+                        nationals.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="flex items-start gap-8 max-sm:flex-col lg:gap-32 fade-up">
+                  <!-- Icon + Title -->
+                  <div class="flex flex-col items-start gap-2">
+                    <!-- Icon -->
+                    <img src="src/team.svg" alt="Training Icon" class="w-16 h-16" />
+
+                    <!-- Text -->
+                    <div>
+                      <h2 class="text-xl text-green-700">Training <br> Programs<br>Overview</h2>
+                    </div>
+                  </div>
+
+                  <!-- Numbers -->
+                  <div class="flex flex-col gap-4 ">
+                    <div class="flex items-start gap-32 text-gray-800 max-sm:flex-col max-sm:gap-8">
+                      <div class="flex gap-4">
+                        <span class="text-5xl text-[var(--yellow)] counter" data-count="296">0</span>
+                        <div class="text-sm">
+                          <strong>Senior Management</strong><br>
+                          <span class="text-gray-500">Training Hours</span>
+                        </div>
+                      </div>
+                      <div class="flex gap-4">
+                        <span class="text-5xl  text-[var(--green)] counter" data-count="606">0</span>
+                        <div class="text-sm">
+                          <strong>Senior Management</strong><br>
+                          <span class="text-gray-500">Training Hours</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="max-w-md pt-2 text-sm text-gray-700">
+                      In 2024, the organization provided a total of 72,404 hours of training, averaging 20.3 hours per
+                      colleague.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- Heading and Download -->
+                <div class="flex flex-wrap items-end justify-start lg:gap-10 max-sm:gap-6 mb-14 fade-up">
+                  <h2 class="text-4xl text-[var(--green)]  ">Our Workforce</h2>
+                  <a href="pdf/Tanmiah_Sustaining_People.pdf" target="_blank"
+                    class="pb-2 text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+                </div>
+
+                <!-- Workforce Table -->
+<div class="overflow-x-auto overflow-y-hidden">
+  <div class="min-w-[800px] grid grid-cols-[auto_1fr_auto] gap-16 items-start w-fit">
+    
+    <!-- Icons & Rows -->
+    <div class="flex flex-col justify-center gap-20">
+      <img src="src/women.svg" alt="Women" class="mt-20 fade-up" />
+      <img src="src/men.svg" alt="Men" class="fade-up" />
+    </div>
+
+    <!-- Data Table -->
+    <div class="grid grid-cols-5 gap-10 text-center">
+      <!-- Header Row -->
+      <div class="text-sm font-medium text-gray-700 fade-up">Operators &<br>general support</div>
+      <div class="text-sm font-medium text-gray-700 fade-up">Supervisory &<br>professional</div>
+      <div class="text-sm font-medium text-gray-700 fade-up">Management</div>
+      <div class="text-sm font-medium text-gray-700 fade-up">Senior leadership</div>
+      <div></div>
+
+      <!-- Row 1: Women -->
+      <div >
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="162">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="173">0</div>
+      </div>
+      <div>
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="109">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="157">0</div>
+      </div>
+      <div>
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="4">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="4">0</div>
+      </div>
+      <div>
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="3">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="3">0</div>
+      </div>
+
+      <div class="flex flex-col justify-center gap-3">
+        <div class="flex items-center gap-2 fade-up">
+          <span class="w-3 h-3 bg-[var(--yellow)] rounded-full"></span>
+          <span class="text-base text-gray-700 counter" data-count="2023">0</span>
+        </div>
+        <div class="flex items-center gap-2 ">
+          <span class="w-3 h-3 bg-[var(--green)] rounded-full"></span>
+          <span class="text-base text-gray-700 counter" data-count="2024">0</span>
+        </div>
+      </div>
+
+      <!-- Row 2: Men -->
+      <div class="mt-16">
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="2206">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="2327">0</div>
+      </div>
+      <div class="mt-16">
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="540">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="672">0</div>
+      </div>
+      <div class="mt-16">
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="166">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="179">0</div>
+      </div>
+      <div class="mt-16">
+        <div class="bg-[var(--yellow)] text-white px-4 py-3 mb-5 counter" data-count="41">0</div>
+        <div class="bg-[var(--green)] text-white px-4 py-3 counter" data-count="53">0</div>
+      </div>
+
+      <div class="flex flex-col justify-center gap-3 mt-16">
+        <div class="flex items-center gap-2 fade-up">
+          <span class="w-3 h-3 bg-[var(--yellow)] rounded-full"></span>
+          <span class="text-base text-gray-700 counter" data-count="2023">0</span>
+        </div>
+        <div class="flex items-center gap-2 ">
+          <span class="w-3 h-3 bg-[var(--green)] rounded-full"></span>
+          <span class="text-base text-gray-700 counter" data-count="2024">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+                <div class="flex items-start gap-5 pl-3 mt-24 max-sm:flex-col lg:gap-36 fade-up">
+                  <!-- Icon + Title -->
+                  <div class="flex flex-col items-start gap-2">
+                    <!-- Icon -->
+                    <img src="src/team.svg" alt="Training Icon" class="w-16 h-16" />
+
+                    <!-- Text -->
+                    <div>
+                      <h2 class="text-[var(--green)] text-xl">Training <br> Programs<br>Overview</h2>
+                    </div>
+                  </div>
+
+                  <!-- Numbers -->
+                  <div class="flex flex-col gap-4 ">
+                    <div class="flex items-start gap-32 text-gray-800 max-sm:flex-col">
+                      <div class="flex gap-4">
+                        <span class="text-5xl text-[var(--yellow)] counter" data-count="514">0</span>
+                        <div class="text-sm">
+                          <strong>Middle Management</strong><br>
+                          <span class="text-gray-500">Training Hours</span>
+                        </div>
+                      </div>
+                      <div class="flex gap-4">
+                        <span class="text-5xl  text-[var(--green)] counter" data-count="5564">0</span>
+                        <div class="text-sm">
+                          <strong>Middle Management</strong><br>
+                          <span class="text-gray-500">Training Hours</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="max-w-md pt-2 text-sm text-gray-700">
+                      In 2024, the organization provided a total of 72,404 hours of training, averaging 20.3 hours per
+                      colleague.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="">
+                  <div class="container flex flex-col items-start justify-center h-full m-auto">
+
+                    <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+                      <h2 class="text-4xl text-[var(--green)] ">Age Group </h2>
+                      
+                    </div>
+                    <p class="w-full mb-16 text-xl leading-snug lg:w-1/2 fade-up">
+                      Tanmiah has remained committed to local
+                      sourcing in 2024, driven by a collaborative
+                      approach that fosters mutual growth &
+                      strengthens the local community.
+                    </p>
+                    <div
+                      class="flex flex-col items-center justify-between w-full gap-8 text-white rounded-lg lg:flex-row fade-up">
+
+
+                      <!-- Right: Text + Bars -->
+                      <div class="flex-1 w-full space-y-6">
+
+                        <!-- Aged Under 30 Years -->
+                        <div>
+                          <div class="text-sm text-gray-800">Aged Under 30 Years</div>
+                          <div class="relative h-12 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                            <div class="absolute top-0 left-0 h-12 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="70%" data-number="1014"></div>
+                            <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                            <span
+                              class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                            <span
+                              class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                          </div>
+                        </div>
+
+                        <!-- Aged 30-50 Years -->
+                        <div>
+                          <div class="mb-1 text-sm text-gray-800">Aged 30-50 Years
+                          </div>
+                          <div class="relative h-12 w-[90%] max-sm:w-[77%] progress-bar-container">
+                            <div class="absolute top-0 left-0 h-12 bg-[var(--green)]  w-0 progress-bar" data-width="80%" data-number="2199"></div>
+                            <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                            <span
+                              class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                            <span
+                              class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                          </div>
+                        </div>
+
+                        <!-- Aged above 50 years -->
+                        <div>
+                          <div class="mb-1 text-sm text-gray-800">Aged above 50 years
+                          </div>
+                          <div class="relative h-12 w-[90%] max-sm:w-[77%] progress-bar-container">
+                            <div class="absolute top-0 left-0 h-12 bg-[var(--yellow)]  w-0 progress-bar" data-width="40%" data-number="355"></div>
+                            <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                            <span
+                              class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                            <span
+                              class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                          </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-20 max-sm:flex-col max-sm:items-start">
+                          <img src="src/badge.svg" alt="">
+                          <p class="text-2xl text-gray-700 max-sm:text-lg">
+                            Tanmiah achieved Silver Mowaamah Certification For <br />
+                            providing a safe work environment for persons with disabilities.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="">
+                  <div class="container flex flex-col items-start justify-center h-full m-auto">
+
+                    <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+                      <h2 class="text-4xl text-[var(--green)] ">Growth in Female Employees </h2>
+                      
+                    </div>
+                    <p class="w-full mb-16 text-xl leading-snug lg:w-3/4 fade-up">
+                      Tanmiah hired a total of 603 new
+                      colleagues in 2024 and saw an increase
+                      in the hiring of both males and females.
+                      This demonstrates our commitment
+                      towards ensuring that our workforce
+                      consists of new and upcoming talented
+                      individuals. The hiring rates also
+                      represent our presence in the market as
+                      a desirable employer.
+                    </p>
+
+                    <div class="flex items-center gap-6 mb-16 text-gray-700 max-sm:flex-col max-sm:items-start fade-up">
+                      <p class="text-2xl">
+                        Growth by year
+                      </p>
+  <!-- First item -->
+  <div class="flex items-center space-x-2 ">
+    <span class="w-4 h-4 bg-[var(--green)] rounded-full"></span>
+    <span>Male</span>
+  </div>
+  <!-- Second item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--yellow)] rounded-full"></span>
+    <span>Female</span>
+  </div>
+</div>
+
+
+                    <div
+                      class="flex flex-col items-center justify-between w-full gap-8 text-white rounded-lg lg:flex-row fade-up">
+
+                      <div class="flex flex-col flex-1 w-full space-y-6">
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2022 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2022">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="60%" data-number="163"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">163</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="30%" data-number="66"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2023 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2023">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="50%" data-number="125"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[40%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="10%" data-number="07"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[0%] opacity-65  text-gray-700 -translate-y-[8%] text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2024 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2024">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="90%" data-number="505"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="progress-bar-container relative h-8 w-[90%] max-sm:w-[77%]">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="45%" data-number="98"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="absolute right-0 z-30 -translate-y-1/2 select-none custom-next custom-next1"><img
+                src="src/nextgreen.svg" alt="Next" class="max-w-12 max-h-12"></div>
+          </div>
+
+          
+
+
+        </div>
+      </div>
+
+            <div class="lg:px-10 ">
+
+        <div class="container px-8 m-auto lg:py-24 max-sm:py-16 ">
+          <div class="flex flex-wrap items-end justify-start mb-3 lg:gap-10 max-sm:gap-6 fade-up">
+            <h2 class="text-4xl text-[var(--green)] leading-snug">Occupational Health & Safety Indicators 2024</h2>
+            <a href="pdf/Tanmiah_Sustaining_People.pdf" target="_blank" class="pb-2 text-sm font-medium underlineanime">DOWNLOAD
+              PDF</a>
+          </div>
+
+          <p class="mb-10 text-xl leading-snug lg:w-3/4 fade-up">
+In 2024, our team worked for a total of
+19,348,992 hours and no fatalities were
+recorded. This cements our commitment
+towards the health and safety of our
+colleagues. We aim to maintain and raise
+the standard we have set and adhere to
+ISO 45001:2018 requirements to further
+ensure the safety of our team. 
+          </p>
+
+          
+    <!-- Stats Section -->
+<div class="flex items-start mt-20 max-sm:flex-col gap-28 max-sm:gap-10">
+    <div class="grid gap-16 mb-10 md:grid-cols-4 w-fit">
+      <!-- Card 1 -->
+      <div class=" w-fit">
+        <p class="mb-1 text-sm text-gray-500 min-h-10">Number of Lost <br> Time Injuries (LTIs)</p>
+        <hr class="mb-4 border-gray-400 lg:w-full fade-up">
+        <p class="text-7xl text-[var(--yellow)] counter" data-count="23">0</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class=" w-fit">
+        <p class="mb-1 text-sm text-gray-500 min-h-10 ">Lost Time Injury <br> Frequency Rate (LTIFR)</p>
+        <hr class="mb-4 border-gray-400 lg:w-full fade-up">
+        <p class="text-7xl text-[var(--yellow)] counter" data-count="1.19">0</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class=" w-fit">
+        <p class="mb-1 text-sm text-gray-500 min-h-10">First Aid Cases</p>
+        <hr class="mb-4 border-gray-400 lg:w-full fade-up">
+        <p class="text-7xl text-[var(--yellow)] counter" data-count="67">0</p>
+      </div>
+
+    </div>
+
+
+          <!-- Training Info -->
+<div>
+        <p class="w-full text-2xl text-gray-800">
+         In 2024, the organization <br>
+conducted 5,672 hours<br>
+of HSE training attended<br>
+by a total of 4,063<br>
+participants.
+        </p>
+        <div class="bg-[var(--yellow)] h-0.5 mb-4 lg:w-1/3 mt-9 fade-up"></div>
+</div>
+</div>
+
+   <!-- Bottom Section -->
+    <div class="flex max-sm:flex-col items-center bg-[#F5F5F5] rounded-full  p-3.5 w-fit max-sm:hidden">
+      <!-- Left Circle -->
+      <div class="flex items-center justify-center bg-[var(--green)] text-white rounded-full w-16 h-16 text-lg counter" data-count="2024">0</div>
+      <!-- Middle -->
+      <div class="flex flex-col items-start px-24 border-r border-gray-300 max-sm:px-0 max-sm:py-10 max-sm:border-r-0">
+        <p class="text-3xl text-green-700 counter" data-count="19348992">0</p>
+        <p class="text-sm text-gray-500">Total Man Hours</p>
+      </div>
+      <!-- Right -->
+      <div class="flex flex-col items-center px-6">
+        <p class="text-3xl text-green-700">0</p>
+        <p class="text-sm text-gray-500">Fatalities</p>
+      </div>
+    </div>
+
+          
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="section4">
+
+
+
+
+
+      <div>
+
+
+
+
+                <div class="  bg-[var(--green)] px-10    ">
+          <div
+            class="container flex flex-col items-start justify-center h-full m-auto lg:pl-8 lg:py-24 max-sm:py-16">
+
+<h2 class="w-full mb-16 text-5xl text-center text-white">Key CSR Activities</h2>
+   <!-- Grid -->
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center gap-8 text-center">
+        <p class="text-white w-[51%] text-sm">Official Partner of Saudi Green Initiative</p>
+        <img src="src/1.svg" alt="Saudi Green Initiative">
+        
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center gap-8 text-center">
+        <p class="w-3/4 text-sm text-white">Middle East Green Initiative Project - Bahrain - 100,000 donated</p>
+        <img src="src/2.svg" alt="Middle East Green Initiative">
+        
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col items-center gap-8 text-center">
+        <p class="w-3/4 text-sm text-white">Agreement to plant 100,000 Trees at Al-Soudah Company in Asir</p>
+        <img src="src/3.svg" alt="Tree Planting">
+        
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flex flex-col items-center gap-8 text-center">
+        <img src="src/4.svg" alt="Majmaah University">
+        <p  class="w-3/4 text-sm text-white">Tanmiah signed an agreement with Majmaah University for talent development</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flex flex-col items-center gap-8 text-center">
+        <img src="src/5.svg" alt="Qassim University">
+        <p  class="w-3/4 text-sm text-white">200k SAR sponsorship for Qassim University from DHV which will focus on knowledge sharing and technology</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="flex flex-col items-center gap-8 text-center">
+        <img src="src/6.svg" alt="Saudi Food Show">
+        <p  class="w-3/4 text-sm text-white">Tanmiah sponsored the “Zero Waste” competition at the Saudi Food Show 2024</p>
+      </div>
+      
+    </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class=" lg:px-10 max-sm:pr-4">
+          <div class="container flex flex-col items-start justify-center h-full pl-8 m-auto lg:py-24 max-sm:py-16">
+            <div class="flex flex-wrap items-end justify-start gap-10 mb-20 maxsm:mb-14 fade-up">
+              <h2 class="text-4xl text-[var(--green)]  ">Prioritizing Animal Welfare</h2>
+              <a href="pdf/Tanmiah_Sustaining_Agriculture.pdf" target="_blank"
+                class="pb-2 text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-5">
+              <!-- Card 1 -->
+              <div class="bg-[var(--green)] p-6 rounded-2xl h-full fade-up">
+                <img src="src/animal1.png" class="w-full mb-4 rounded-xl" alt="">
+                <div class="font-semibold text-white ">Freedom from Hunger and Thirst: <span
+                    class="text-sm font-normal text-white">For optimum health and development, we provide continuous
+                    access
+                    to potable water and a well-balanced meal.</span>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="bg-[var(--lightgreen)] p-6 rounded-2xl h-full fade-up">
+                <img src="src/animal2.png" class="w-full mb-4 rounded-xl" alt="">
+                <div class="font-semibold text-white ">Freedom from Discomfort: <span
+                    class="text-sm font-normal text-white">
+
+
+                    We guarantee appropriate housing conditions that meet international standards. </span>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="bg-[var(--green)] p-6 rounded-2xl h-full fade-up">
+                <img src="src/animal3.png" class="w-full mb-4 rounded-xl" alt="">
+                <div class="font-semibold text-white ">Freedom from Pain or Disease: <span
+                    class="text-sm font-normal text-white">
+                    We offer timely diagnosis and treatment in addition to implementing immunizations as a preventative
+                    medical measure. </span>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="bg-[var(--lightgreen)] p-6 rounded-2xl h-full fade-up">
+                <img src="src/animal4.png" class="w-full mb-4 rounded-xl" alt="">
+                <div class="font-semibold text-white ">Freedom to Express Normal Behavior: <span
+                    class="text-sm font-normal text-white">
+                    We give them enough room, suitable amenities, and opportunities to socialize with other birds.
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="bg-[var(--green)] p-6 rounded-2xl h-full fade-up">
+                <img src="src/animal5.png" class="w-full mb-4 rounded-xl" alt="">
+                <div class="font-semibold text-white ">Freedom from Fear and Distress: <span
+                    class="text-sm font-normal text-white">
+
+
+                    To reduce mental anguish, we establish conducive environments and offer careful attention. </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="  bg-[var(--green)] px-10    ">
+          <div
+            class="container flex flex-col items-start justify-center h-full m-auto lg:pl-8 lg:py-24 max-sm:py-16">
+
+            <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+              <h2 class="text-4xl text-[var(--yellow)] ">Local Procurement </h2>
+              <a href="pdf/Tanmiah_Sustaining_Agriculture.pdf" target="_blank"
+                class="text-sm font-medium text-white underlineanime">DOWNLOAD PDF</a>
+            </div>
+            <p class="w-full mb-16 text-xl leading-snug text-white lg:w-1/2 fade-up">
+              Tanmiah has remained committed to local
+              sourcing in 2024, driven by a collaborative
+              approach that fosters mutual growth &
+              strengthens the local community.
+            </p>
+            <div
+              class="flex flex-col items-center justify-between w-full gap-8 text-white rounded-lg lg:flex-row fade-up">
+              <!-- Left: Circular Chart -->
+              <div
+                class="bg-white text-center text-gray-800 p-6 rounded-lg flex max-sm:flex-col w-[400px] max-sm:w-full justify-center items-center">
+                <p class="text-2xl mb-4 text-start lg:w-[145px]">62% Local Procurement Spending / Total Procurement
+                  Spent</p>
+<div class="chart"
+         data-percent="62"
+         data-text-color="var(--green)"
+         data-color="var(--green)"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-font-size="36">
+    </div>
+              </div>
+
+              <!-- Right: Text + Bars -->
+              <div class="flex-1 w-full space-y-6">
+                <div class="flex justify-between items-center py-3 bg-[#025C32] border-t border-t-amber-400">
+                  <h2 class="text-2xl font-semibold">Procurement Spending</h2>
+                  <span class="text-2xl text-white counter" data-count="2024">0</span>
+                </div>
+
+                <!-- Local Procurement -->
+                <div>
+                  <div class="text-sm ">Local Procurement Spending (Million)</div>
+                  <div class="relative h-12 w-[90%] progress-bar-container">
+
+                    <div class="absolute top-0 left-0 w-0 h-12 bg-green-500 progress-bar"  data-width="70%" data-number="971"></div>
+                    <div class="absolute top-1/2  left-0 h-[1px] bg-gray-50 opacity-35  w-[100%]"></div>
+                    <span
+                      class="absolute -right-[4px] top-[50%] opacity-65 -translate-y-1/2 text-gray-50 text-2xl">•</span>
+                    <span
+                      class="progress-counter absolute lg:-right-[6.7rem] -right-[3rem]  top-1/2 -translate-y-1/2 text-white text-2xl" >0</span>
+                  </div>
+                </div>
+
+                <!-- Total Procurement -->
+                <div>
+                  <div class="mb-1 text-sm">Total Procurement Spending (Million)
+                  </div>
+                  <div class="relative h-12 w-[90%] progress-bar-container">
+                    <div class="absolute top-0 left-0 h-12 bg-[var(--yellow)]  w-0 progress-bar" data-width="80%" data-number="1578"></div>
+                    <div class="absolute top-1/2  left-0 h-[1px] bg-gray-50 opacity-35  w-[100%]"></div>
+                    <span
+                      class="absolute -right-[4px] top-[50%] opacity-65 -translate-y-1/2 text-gray-50 text-2xl">•</span>
+                    <span
+                      class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 -translate-y-1/2 text-white text-2xl">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container flex flex-col items-center justify-center gap-16 px-10 mx-auto lg:py-24 max-sm:py-16">
+
+
+          <div class="flex flex-col items-center justify-center fade-up">
+
+
+            <p class="text-xl lg:text-4xl text-[color:var(--green)] max-w-[1000px] !leading-[1.4] text-center">
+              Our resolve towards ensuring animal welfare is demonstrated in the various
+              certifications and audits that were conducted in 2024
+            </p>
+          </div>
+
+          <div class="flex justify-center gap-10 p-6 max-sm:flex-col ">
+
+            <div class="flex flex-col items-center gap-5 fade-up max-w-60">
+              <div id="" >
+                <div class="chart"
+         data-percent="99"
+         data-text-color="#00A058"
+         data-color="#00A058"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-rotate="315">
+    </div>
+              </div>
+              <p class="w-2/3 text-center">Animal welfare certification for <br> <span
+                  class="font-medium">Hatchery</span>
+              </p>
+            </div>
+            <div class="flex flex-col items-center gap-5 fade-up max-w-60">
+              <div id="">
+                <div class="chart"
+         data-percent="98"
+         data-text-color="#53AE80"
+         data-color="#53AE80"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-rotate="315">
+    </div>
+                
+              </div>
+              <p class="w-2/3 text-center">Animal welfare certification for <br> <span class="font-medium">Broiler
+                  farms</span>
+              </p>
+            </div>
+            <div class="flex flex-col items-center gap-5 fade-up max-w-60">
+              <div id="" >
+                <div class="chart"
+         data-percent="100"
+         data-text-color="#036738"
+         data-color="#036738"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-rotate="315">
+    </div>
+                
+              </div>
+              <p class="w-2/3 text-center">Animal welfare certification for <br> <span class="font-medium">Primary Processing Plant
+                  </span>
+
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+
+
+
+    <section id="section5">
+
+      <div class="lg:py-24 max-sm:py-16 bg-[url('src/plant.png')] bg-center bg-no-repeat bg-cover">
+        <div class="container flex m-auto text-white lg:pr-0 max-sm:flex-col-reverse ">
+
+          <div class="flex flex-col justify-between flex-1 px-10 lg:py-24 max-sm:py-16">
+            <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+              <h2 class="text-4xl  text-[var(--yellow)]  ">
+                Sustaining Planet
+              </h2>
+              <a href="pdf/Tanmiah_Sustaining_Planet.pdf" target="_blank"
+                class="text-sm font-medium text-white underlineanime">DOWNLOAD PDF</a>
+            </div>
+
+            <p class="text-white text-xl  leading-snug lg:max-w-[45%] max-sm:w-full  mb-16 fade-up">
+              Healthy land is the foundation of Tanmiah’s long-term success—and of our promise to a healthier planet.
+              Guided by our sustainability vision, we pursue circular economy, precision-resource management, smart
+              water-conservation, energy-efficiency upgrades, and on-site solar power.
+            </p>
+
+
+            <p class="mb-16 text-3xl leading-snug text-white fade-up">
+              Electricity Consumption <br> (million kWh)
+            </p>
+
+            <div class="flex gap-6 mb-3 max-sm:flex-col">
+              <div class="flex gap-1.5 items-center fade-up">
+                <p class="text-5xl text-[var(--yellow)] font-medium counter" data-counter="82.0">0</p>
+                <p class="text-base counter" data-count="2022">0</p>
+              </div>
+
+              <div class="flex gap-1.5 items-center fade-up">
+                <p class="text-5xl text-[var(--yellow)] font-medium counter" data-counter="89.0">0</p>
+                <p class="text-base counter" data-count="2023">0</p>
+              </div>
+
+              <div class="flex gap-1.5 items-center fade-up">
+                <p class="text-5xl text-[var(--yellow)] font-medium counter" data-counter="115.5">0</p>
+                <p class="text-base counter" data-count="2024">0</p>
+              </div>
+
+
+            </div>
+
+            <p class="text-lg max-w-96 fade-up">In 2024, Tanmiah decreased electricity intensity 5.41%
+              compared to
+              2022
+            </p>
+
+
+          </div>
+          <!-- 
+          <div class="flex items-stretch flex-1 fade-up">
+            <img src="src/plant.png" alt="" class="object-cover w-full h-full" />
+          </div> -->
+
+
+
+
+        </div>
+      </div>
+
+
+      <div class="">
+        <div class="container px-10 mx-auto lg:py-24 max-sm:py-16">
+
+
+
+
+          <div class="relative w-full swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class=" fade-up">
+                  <div class="container flex flex-col items-start justify-center h-full m-auto">
+
+                    <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+                      <h2 class="text-4xl text-[var(--green)] ">Climate Action and Energy Efficiency 
+ </h2>
+                      <a href="pdf/Tanmiah_Sustaining_Planet.pdf" target="_blank" class="text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+                    </div>
+                    <p class="w-full mb-16 text-xl leading-snug lg:w-3/4 fade-up">
+As a leading poultry producer in the
+region, we understand the risks posed
+by climate change. Our strategy
+is shaped by the challenges and
+opportunities related to climate issues.
+In 2024, Tanmiah
+decreased electricity
+intensity 5.41%
+compared to 2022
+                    </p>
+
+<div class="flex items-start gap-6 mb-16 text-gray-700 max-sm:flex-col">
+  <!-- First item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--green)] rounded-full"></span>
+    <span>Electricity Consumption (million kWh)</span>
+  </div>
+  <!-- Second item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--yellow)] rounded-full"></span>
+    <span>Electricity Intensity (million kWh)</span>
+  </div>
+</div>
+
+
+
+                    <div
+                      class="flex flex-col items-center justify-between w-full gap-8 text-white rounded-lg lg:flex-row fade-up">
+
+                      <div class="flex flex-col flex-1 w-full space-y-6">
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2022 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2022">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="60%" data-number="82"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">82.0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="30%" data-number="47.5"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2023 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2023">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="70%" data-number="89.0"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[40%] opacity-65  text-gray-700 -translate-y-[40%] text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="40%" data-number="42.7"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[0%] opacity-65  text-gray-700 -translate-y-[30%] text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2024 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2024">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="80%" data-number="115.5"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="50%" data-number="45.0"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl">45.0</span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                            <div class="swiper-slide">
+                <div class=" fade-up">
+                  <div class="container flex flex-col items-start justify-center h-full m-auto">
+
+                    <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+                      <h2 class="text-4xl text-[var(--green)] ">Carbon Sequestration Through Plantation 
+ </h2>
+                     
+                    </div>
+                    <p class="w-full mb-16 text-xl leading-snug lg:w-3/4 fade-up">
+Since 2021, Tanmiah has led a largescale tree-planting initiative to support
+climate action and increase green cover
+across Saudi Arabia. Over the past four
+years, we have planted approximately
+407,000 trees, contributing to an
+estimated carbon offset of 114,800 tons
+of CO2 equivalent (tCO2e).
+                    </p>
+
+<div class="flex items-start gap-6 mb-16 text-gray-700 max-sm:flex-col">
+  <!-- First item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--green)] rounded-full"></span>
+    <span>Number of Trees</span>
+  </div>
+  <!-- Second item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--yellow)] rounded-full"></span>
+    <span>Equivalent Offsetting (tCO2e)</span>
+  </div>
+</div>
+
+
+
+                    <div
+                      class="flex flex-col items-center justify-between w-full gap-8 text-white rounded-lg lg:flex-row fade-up">
+
+                      <div class="flex flex-col flex-1 w-full space-y-6">
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2021 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2021">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="90%" data-number="200"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="20%" data-number="27"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2022 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2022">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="60%" data-number="100"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[40%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="40%" data-number="56"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[0%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2023 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2023">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="80%" data-number="138"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="50%" data-number="97"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+
+                                                <!-- Right: Text + Bars -->
+                        <div class="flex-1 space-y-3">
+
+                          <!-- 2024 -->
+                          <div>
+                            <div class="text-sm text-gray-800 counter" data-count="2024">0</div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--lightgreen)]  w-0 progress-bar" data-width="40%" data-number="68"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem]  top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div class="relative h-8 w-[90%] max-sm:w-[77%] progress-bar-container">
+                              <div class="absolute top-0 left-0 h-8 bg-[var(--yellow)]  w-0 progress-bar" data-width="50%" data-number="114"></div>
+                              <div class="absolute top-1/2  left-0 h-[1px] bg-gray-700  opacity-35  w-[100%]"></div>
+                              <span
+                                class="absolute -right-[4px] top-[50%] opacity-65  text-gray-700 -translate-y-1/2 text-2xl">•</span>
+                              <span
+                                class="progress-counter absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 text-gray-700 -translate-y-1/2 text-2xl" data-suffix="k">0</span>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="absolute right-0 z-30 -translate-y-1/2 select-none custom-next custom-next1"><img
+                src="src/nextgreen.svg" alt="Next" class="max-w-12 max-h-12"></div>
+          </div>
+
+          
+
+
+        </div>
+      </div>
+
+
+      <div class="">
+        <div class="container px-10 mx-auto lg:py-24 max-sm:py-16">
+
+
+
+
+          <div class="relative w-full swiper mySwiper">
+            <div class="swiper-wrapper">
+
+               <div class="swiper-slide">
+                <div class=" fade-up">
+                  <div class="container flex flex-col items-start justify-center h-full m-auto">
+
+                    <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+                      <h2 class="text-4xl text-[var(--green)] ">Water Recycling Rate 
+ </h2>
+                      <a href="pdf/Tanmiah_Sustaining_Planet.pdf" target="_blank" class="text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+                    </div>
+                    <p class="w-full mb-16 text-xl leading-snug lg:w-3/4 fade-up">
+In 2024, we adhered to a stringent
+approach to wastewater management
+across all our facilities. Wastewater
+was meticulously processed, either
+being treated and repurposed for
+appropriate uses within our operations.
+                    </p>
+
+
+
+ <!-- Circles + Text -->
+  <div class="flex flex-wrap items-center justify-between gap-10 mt-10 fade-up ">
+    <!-- Year Blocks -->
+    <div class="flex flex-col items-center">
+<div class="chart"
+         data-percent="21"
+         data-text-color="#00A058"
+         data-color="#00A058"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-rotate="315">
+    </div>
+      <p class="mt-2 text-gray-700 counter" data-count="2022">0</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+<div class="chart"
+         data-percent="25"
+         data-text-color="#00A058"
+         data-color="#00A058"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-rotate="315">
+    </div>
+      <p class="mt-2 text-gray-700 counter" data-count="2023">0</p>
+    </div>
+
+    <div class="flex flex-col items-center">
+<div class="chart"
+         data-percent="23"
+         data-text-color="#00A058"
+         data-color="#00A058"
+         data-label="true"
+         data-thickness="30"
+         data-rounded="false"
+         data-size="230"
+         data-rotate="315">
+    </div>
+      <p class="mt-2 text-gray-700 counter" data-count="2024">0</p>
+    </div>
+
+    <!-- Right Text -->
+    <div class="max-w-xs text-gray-700">
+      <p>
+        Compared to 2023, the amount of wastewater recycled increased by <span class="font-semibold">3.1%</span>.
+      </p>
+      <div class="w-10 h-[2px] bg-yellow-400 mt-4"></div>
+    </div>
+  </div>
+                  </div>
+                </div>
+              </div>
+
+               <div class="swiper-slide">
+                <div class=" fade-up">
+                  <div class="container flex flex-col items-start justify-center h-full m-auto">
+
+                    <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up">
+                      <h2 class="text-4xl text-[var(--green)] ">Emissions Management and Initiatives 
+ </h2>
+                      <!-- <a href="" target="_blank" class="text-sm font-medium underlineanime">DOWNLOAD PDF</a> -->
+                    </div>
+                    <p class="w-full mb-16 text-xl leading-snug lg:w-3/4 fade-up">
+In 2024, we observed a reduction in
+both our petrol and diesel consumption
+by 24.6% and 3.10% respectively. This
+highlights our improved operational
+efficiency and the effectiveness of our
+fuel management strategies. 
+                    </p>
+
+                    <div class="flex items-start gap-6 mb-16 text-gray-700 max-sm:flex-col">
+  <!-- First item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--green)] rounded-full"></span>
+    <span>Scope 1</span>
+  </div>
+  <!-- Second item -->
+  <div class="flex items-center space-x-2">
+    <span class="w-4 h-4 bg-[var(--yellow)] rounded-full"></span>
+    <span>Scope 2</span>
+  </div>
+</div>
+
+
+
+<div class="flex flex-col items-center justify-between gap-8 px-4 md:flex-row md:items-start md:gap-12 md:px-8">
+  
+  <!-- Year Block -->
+  <div class="flex items-start space-y-4">
+    <p class="text-lg font-medium text-gray-600 counter" data-count="2022">0</p>
+    <div class="flex items-end space-x-6">
+      <!-- Scope 1 Circle -->
+      <div class="flex flex-col items-start">
+        <img src="src/scope1.svg" alt="" class="">
+        <p class="mt-2 text-xs text-gray-500">MtCO₂e</p>
+        <p class="text-xl text-gray-800 md:text-base counter" data-count="151545">0</p>
+      </div>
+      <!-- Scope 2 Circle -->
+      <div class="flex flex-col items-start">
+        <img src="src/scope2.svg" alt="" class="">
+        <p class="mt-2 text-xs text-gray-500">MtCO₂e</p>
+        <p class="text-xl text-gray-800 md:text-base counter" data-count="43194">0</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repeat for 2023 -->
+  <div class="flex items-start space-y-4">
+    <p class="text-lg font-medium text-gray-600 counter" data-count="2023">0</p>
+    <div class="flex items-end space-x-6">
+      <div class="flex flex-col items-start">
+        <img src="src/scope1.svg" alt="" class="">
+        <p class="mt-2 text-xs text-gray-500">MtCO₂e</p>
+        <p class="text-xl text-gray-800 md:text-base counter" data-count="160234">0</p>
+      </div>
+      <div class="flex flex-col items-start">
+        <img src="src/scope2.svg" alt="" class="">
+        <p class="mt-2 text-xs text-gray-500">MtCO₂e</p>
+        <p class="text-xl text-gray-800 md:text-base counter" data-count="54865">0</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repeat for 2024 -->
+  <div class="flex items-start space-y-4">
+    <p class="text-lg font-medium text-gray-600 counter" data-counter="2024">0</p>
+    <div class="flex items-end space-x-6">
+      <div class="flex flex-col items-start">
+        <img src="src/scope1.svg" alt="" class="">
+        <p class="mt-2 text-xs text-gray-500">MtCO₂e</p>
+        <p class="text-xl text-gray-800 md:text-base counter" data-count="154973">0</p>
+      </div>
+      <div class="flex flex-col items-start">
+        <img src="src/scope2.svg" alt="" class="">
+        <p class="mt-2 text-xs text-gray-500">MtCO₂e</p>
+        <p class="text-xl text-gray-800 md:text-base counter" data-count="70921">0</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="absolute right-0 z-30 -translate-y-1/2 select-none custom-next custom-next1"><img
+                src="src/nextgreen.svg" alt="Next" class="max-w-12 max-h-12"></div>
+          </div>
+
+          
+
+
+        </div>
+      </div>
+
+
+      <!-- Section 8 -->
+      <div class="  bg-[var(--lightbg)] px-10    ">
+        <div class="container flex flex-col items-start justify-center h-full m-auto lg:px-10 lg:py-24 max-sm:py-16">
+
+          <div class="flex flex-wrap items-end justify-start gap-10 mb-14 fade-up">
+            <h2 class="text-4xl text-[var(--green)]  ">Tanmiah’s 2024 Recycling Achievements</h2>
+            <a href="pdf/Tanmiah_Sustaining_Planet.pdf" target="_blank"
+              class="pb-2 text-sm font-medium underlineanime">DOWNLOAD PDF</a>
+          </div>
+          <div class="w-full">
+            <!-- Responsive Grid: lg=2 per row, md and down = 1 per row -->
+            <div class="grid gap-8 md:grid-cols-1 lg:grid-cols-2 gap-y-12 gap-x-16">
+
+              <!-- Used Oil -->
+              <div class="fade-up">
+                <div
+                  class="flex items-center justify-between mb-0 space-x-3 max-sm:flex-col-reverse max-sm:items-start">
+                 <div class="flex items-end"><p class="text-4xl  text-[var(--green)] counter" data-count="368000">0</p><span class="ml-1 text-lg text-black">Liters</span></div>
+                  <img src="src/icons/SVG/1.svg" class="w-16 h-16" alt="">
+
+                </div>
+                <p class="text-xl border-t-2 border-[var(--yellow)] pt-4 text-gray-600">Used Oil Recycled Quantity</p>
+              </div>
+
+              <!-- Metal Scrap -->
+              <div class="fade-up">
+                <div
+                  class="flex items-center justify-between mb-0 space-x-3 max-sm:flex-col-reverse max-sm:items-start">
+                 <div class="flex items-end"><p class="text-4xl  text-[var(--green)] counter" data-count="1000">0</p><span class="ml-1 text-lg text-black">KG</span></div>
+                  <img src="src/icons/SVG/4.svg" class="w-16 h-16" alt="">
+
+                </div>
+                <p class="text-xl border-t-2 border-[var(--yellow)] pt-4 text-gray-600">Metal Scrap Recycled Quantity
+                </p>
+              </div>
+
+              <!-- E-Waste -->
+              <div class="fade-up">
+                <div
+                  class="flex items-center justify-between mb-0 space-x-3 max-sm:flex-col-reverse max-sm:items-start">
+                  <div class="flex items-end"><p class="text-4xl  text-[var(--green)] counter" data-count="309">0</p><span class="ml-1 text-lg text-black">KG</span></div>
+                  <img src="src/icons/SVG/2.svg" class="w-16 h-16" alt="">
+
+                </div>
+                <p class="text-xl border-t-2 border-[var(--yellow)] pt-4 text-gray-600">E-Waste Recycled Quantity</p>
+              </div>
+
+              <!-- Wooden Pallets -->
+              <div class="fade-up">
+                <div
+                  class="flex items-center justify-between mb-0 space-x-3 max-sm:flex-col-reverse max-sm:items-start">
+                  <div class="flex items-end"><p class="text-4xl  text-[var(--green)] counter" data-count="58800">0</p><span class="ml-1 text-lg text-black">Pieces</span></div>
+                  <img src="src/icons/SVG/3.svg" class="w-16 h-16" alt="">
+
+                </div>
+                <p class="text-xl border-t-2 border-[var(--yellow)] pt-4 text-gray-600">Wooden Pallets: Approx</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="  bg-[var(--green)] px-10    ">
+          <div class="container flex flex-col items-start justify-center h-full m-auto lg:pl-8 lg:py-24 max-sm:py-16">
+
+            <div class="flex flex-wrap items-end justify-start gap-10 mb-8 fade-up active">
+              <h2 class="text-4xl text-[var(--yellow)] ">Optimizing Packaging </h2>
+              <!-- <a href="pdf/Tanmiah_Sustaining_Agriculture.pdf" target="_blank" class="text-sm font-medium text-white underlineanime">DOWNLOAD PDF</a> -->
+            </div>
+            <p class="w-full mb-16 text-xl leading-snug text-white lg:w-1/2 fade-up active">
+              During 2024, we prioritized a strategic
+reduction of our plastic footprint
+through rigorous packaging material
+optimization
+            </p>
+            <div class="flex flex-col items-center justify-between w-full gap-8 text-white rounded-lg lg:flex-row fade-up active">
+              <!-- Left: Circular Chart -->
+              <div class="bg-white text-gray-800 p-6 rounded-lg   w-[400px] max-sm:w-full justify-center items-start">
+ <h2 class="mb-6 text-2xl text-gray-900">
+    Packaging Intensity (units packaging per units of production)
+  </h2>
+
+  <!-- Values -->
+  <div class="flex justify-start gap-8 mb-6">
+    <!-- 2022 -->
+    <div>
+      <p class="text-4xl text-green-600 counter" data-count="1.16">0</p>
+      <p class="text-lg text-gray-600 counter" data-count="2022">0</p>
+    </div>
+    <!-- 2023 -->
+    <div>
+      <p class="text-4xl text-green-600 counter" data-count="0.93">0</p>
+      <p class="text-lg text-gray-600 counter" data-count="2023">0</p>
+    </div>
+    <!-- 2024 -->
+    <div>
+      <p class="text-4xl text-green-600 counter" data-count="1.11">0</p>
+      <p class="text-lg text-gray-600 counter" data-count="2024">0</p>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <p class="text-base leading-relaxed text-gray-700">
+    We pursued opportunities to reduce plastic use across our products and
+    increased exploration of recycled and biodegradable materials
+  </p>
+              </div>
+
+              <!-- Right: Text + Bars -->
+              <div class="flex-1 w-full space-y-6">
+                <div class="flex justify-between items-center py-3 bg-[#025C32] border-t border-t-amber-400">
+                  <h2 class="text-2xl font-semibold">Total Packaging</h2>
+                  <!-- <span class="text-2xl text-white">2024</span> -->
+                </div>
+
+                <!-- Local Procurement -->
+                <div>
+                  <div class="text-sm ">2022</div>
+                  <div class="relative h-12 w-[90%] progress-bar-container">
+
+                    <div class="absolute top-0 left-0 w-0 h-12 bg-green-500 progress-bar" data-width="70%" data-number="133.27"></div>
+                    <div class="absolute top-1/2  left-0 h-[1px] bg-gray-50 opacity-35  w-[94%]"></div>
+                    <span class="absolute right-[54px] top-[50%] opacity-65 -translate-y-1/2 text-gray-50 text-2xl">•</span>
+                    <span class="absolute lg:-right-[6.7rem] -right-[3rem]  top-1/2 -translate-y-1/2 text-white text-2xl progress-counter" data-suffix="Million">0</span>
+                  </div>
+                </div>
+
+                                <!-- Local Procurement -->
+                <div>
+                  <div class="text-sm ">2023</div>
+                  <div class="relative h-12 w-[90%] progress-bar-container">
+
+                    <div class="absolute top-0 left-0 w-0 h-12 bg-yellow-400 progress-bar" data-width="60%" data-number="127.39"></div>
+                    <div class="absolute top-1/2  left-0 h-[1px] bg-gray-50 opacity-35  w-[94%]"></div>
+                    <span class="absolute right-[54px] top-[50%] opacity-65 -translate-y-1/2 text-gray-50 text-2xl">•</span>
+                    <span class="absolute lg:-right-[6.7rem] -right-[3rem]  top-1/2 -translate-y-1/2 text-white text-2xl progress-counter"  data-suffix="Million">0/span>
+                  </div>
+                </div>
+
+                <!-- Total Procurement -->
+                <div>
+                  <div class="mb-1 text-sm counter" data-count="2024">0
+                  </div>
+                  <div class="relative h-12 w-[90%] progress-bar-container">
+                    <div class="absolute top-0 left-0 h-12 bg-[var(--yellow)]  w-0 progress-bar" data-width="80%" data-number="169.96"></div>
+                    <div class="absolute top-1/2  left-0 h-[1px] bg-gray-50 opacity-35  w-[94%]"></div>
+                    <span class="absolute right-[54px] top-[50%] opacity-65 -translate-y-1/2 text-gray-50 text-2xl">•</span>
+                    <span class="absolute lg:-right-[6.7rem] -right-[4rem] top-1/2 -translate-y-1/2 text-white text-2xl progress-counter"  data-suffix="Million">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Section 9 -->
+    <section id="section6" class="bg-white lg:px-10 max-sm:px-4">
+      <div class="container flex flex-col items-start justify-center h-full m-auto lg:py-24 max-sm:py-16">
+
+        <div
+          class="bg-[url('src/footerbg.jpg')] bg-cover bg-center bg-no-repeat rounded-lg mx-auto my-10  shadow-lg overflow-hidden">
+          <div class="grid gap-8 p-10 pr-16 bg-opacity-80 lg:grid-cols-8">
+
+            <!-- Left Content (2/3) -->
+            <div class="lg:col-span-7 fade-up">
+              <h2 class="flex items-center gap-2 text-3xl text-white mb-14">
+                Download our full report
+                <img src="src/icons/book.svg" class="h-14-14 w-14" alt="">
+              </h2>
+
+
+
+
+
+              <a href="pdf/Tanmiah_Sustainability_Report_2024.pdf" target="_blank">
+                <div class="flex gap-0.5">
+
+                  <p class="mb-1 text-white ">Download
+
+                  </p><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--yellow)]" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 6v12m0 0l-6-6m6 6l6-6" />
+                  </svg>
+                </div>
+              </a>
+              <p class="text-white">
+                For more information about Tanmiah, visit
+                <a href="https://www.tanmiah.com" target="_blank"
+                  class="text-[var(--yellow)] underline">www.tanmiah.com</a>
+              </p>
+            </div>
+
+            <!-- Right Content (1/3) -->
+            <div class="space-y-5 text-sm">
+              <div class="fade-up">
+
+                <a href="pdf/Tanmiah_Sustainability_Report_2024_Preview.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">Reprt Highlights</p>
+              </div>
+              <div class="fade-up">
+                <a href="pdf/Tanmiah_About.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">About Us</p>
+              </div>
+              <div class="fade-up">
+                <a href="pdf/Tanmiah_Our_Governance.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">Our Governance </p>
+              </div>
+              <div class="fade-up">
+                <a href="pdf/Tanmiah_Sustaining_People.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">Sustaning People </p>
+              </div>
+              <div class="fade-up">
+                <a href="pdf/Tanmiah_Sustaining_Agriculture.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">Sustaning Agricultural </p>
+              </div>
+              <div class="fade-up">
+                <a href="pdf/Tanmiah_Sustaining_Planet.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">Sustaning Planet</p>
+              </div>
+              <!-- <div class="fade-up">
+                <a href="pdf/Prioritizing_Animal_Welfare.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">Animal Welfare</p>
+              </div> -->
+                            <div class="fade-up">
+                <a href="pdf/Tanmiah_KPMG_Assurance_Report.pdf" target="_blank">
+                  <p class="mb-2 font-medium text-white underlineanime">Download PDF</p>
+                </a>
+                <p class="text-white ">KPMG Assurance Report</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full px-4 pb-10 text-center ">
+          <div
+            class="flex flex-wrap items-center justify-between gap-32 mt-6 text-sm text-gray-600 max-sm:justify-center">
+            <div class="flex flex-col items-center">
+              <img src="src/logo.svg" alt="Tanmiah" class="h-20" />
+              
+
+
+
+            </div>
+            <div>
+
+<!-- Footer: Social Icons -->
+<div class="py-6 ">
+  <div class="container flex justify-center mx-auto">
+    <div class="flex items-center gap-2 sm:gap-2">
+      <!-- Twitter -->
+      <a href="https://x.com/TanmiahFood" target="_blank" rel="noreferrer"
+         aria-label="Twitter"
+         class="flex items-center justify-center w-10 h-10 transition rounded-full bg-white/10 hover:bg-white/20">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-[var(--green)]" fill="currentColor">
+          <path d="M18.244 2H21l-6.51 7.44L22.5 22h-6.77l-4.42-5.7L5.9 22H3.14l6.99-8L1.5 2h6.86l4.03 5.36L18.24 2Zm-2.37 18h1.76L8.21 4h-1.8l9.46 16Z"/>
+        </svg>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/tanmiahfood/?hl=en" target="_blank" rel="noreferrer"
+         aria-label="Instagram"
+         class="flex items-center justify-center w-10 h-10 transition rounded-full bg-white/10 hover:bg-white/20">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-[var(--green)]" fill="currentColor">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.25a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 18 6.25Z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/company/tanmiahfoods/" target="_blank" rel="noreferrer"
+         aria-label="LinkedIn"
+         class="flex items-center justify-center w-10 h-10 transition rounded-full bg-white/10 hover:bg-white/20">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-[var(--green)]" fill="currentColor">
+          <path d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6a2.5 2.5 0 0 1 2.48-2.5ZM3 8h4v13H3Zm7 0h3.8v1.8h.05A4.17 4.17 0 0 1 18 8c3.03 0 5 1.98 5 6.08V21H19v-6c0-1.74-.62-2.93-2.17-2.93-1.19 0-1.9.8-2.21 1.57-.11.27-.14.66-.14 1.05V21H10Z"/>
+        </svg>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/TanmiahFood" target="_blank" rel="noreferrer"
+         aria-label="Facebook"
+         class="flex items-center justify-center w-10 h-10 transition rounded-full bg-white/10 hover:bg-white/20">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-[var(--green)]" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.57 9.87v-6.98H7.9V12h2.53V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.98A10 10 0 0 0 22 12Z"/>
+        </svg>
+      </a>
+
+
+    </div>
+  </div>
+</div>
+
+             <div class="flex items-center gap-4 text-xs font-medium">
+              <span class="fade-up">© Tanmiah 2024</span>
+              <a href="#" class="underlineanime fade-up">Terms & conditions</a>
+              <a href="#" class="underlineanime fade-up">Cookies policy</a>
+            </div> 
+                         <div class="flex items-center justify-center gap-4 text-xs font-medium mt-7">
+             <a target="_blank" href="https://www.thinkcreative.sa" class="fade-up gotham font-regular text-[10px]"> Developed & Designed by Think Creative</a>
+            </div>              
+            </div>
+
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+
+
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jssocials@1.5.0/dist/jssocials.css" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jssocials@1.5.0/dist/jssocials-theme-flat.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jssocials@1.5.0/dist/jssocials.min.js"></script>
+
+
+  <script src="js/index.js"></script>
+  <script>
+    const slider = document.getElementById("slider");
+    const slides = document.querySelectorAll(".slide");
+
+    let index = 0;
+    const totalSlides = slides.length;
+
+    function scrollSlider(direction) {
+      index += direction;
+
+      // Looping logic
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+
+      const slideWidth = slider.offsetWidth;
+      slider.scrollTo({
+        left: index * slideWidth,
+        behavior: "smooth",
+      });
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".custom-next",
+        prevEl: ".custom-prev",
+      },
+    });
+
+
+  </script>
+
+
+
+  <script>
+    const sliders = [
+      { container: '.mySwiper1', next: '.custom-next1', prev: '.custom-prev1' },
+      { container: '.mySwiper2', next: '.custom-next2', prev: '.custom-prev2' },
+      { container: '.mySwiper3', next: '.custom-next3', prev: '.custom-prev3' },
+      { container: '.mySwiper4', next: '.custom-next4', prev: '.custom-prev4' },
+    ];
+
+    sliders.forEach(slider => {
+      new Swiper(slider.container, {
+        loop: true,
+        spaceBetween: 30,
+        pagination: {
+          el: document.querySelector(`${slider.container} .swiper-pagination`),
+          clickable: true,
+        },
+        navigation: {
+          nextEl: slider.next,
+          prevEl: slider.prev,
+        },
+      });
+    });
+
+  </script>
+
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll(".progress-bar-container").forEach(container => {
+      const bar = container.querySelector(".progress-bar");
+      const counterEl = container.querySelector(".progress-counter");
+      const targetWidth = bar.getAttribute("data-width");
+      const targetNumber = parseInt(bar.getAttribute("data-number"));
+
+      let counter = { val: 0 };
+
+      // Animate Bar Width
+      gsap.to(bar, {
+        width: targetWidth,
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        }
+      });
+
+      // Animate Counter
+      gsap.to(counter, {
+        val: targetNumber,
+        duration: 2,
+        ease: "power3.out",
+        onUpdate: () => {
+          counterEl.textContent = Math.floor(counter.val);
+        },
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
+  </script>
+
+
+
+
+<!-- JS -->
+<script>
+  const shareBtn = document.getElementById("shareBtn");
+  const sharePopup = document.getElementById("sharePopup");
+  const closePopup = document.getElementById("closePopup");
+
+  shareBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    sharePopup.classList.remove("hidden");
+  });
+
+  closePopup.addEventListener("click", () => {
+    sharePopup.classList.add("hidden");
+  });
+
+  // Close when clicking outside the popup
+  sharePopup.addEventListener("click", (e) => {
+    if (e.target === sharePopup) {
+      sharePopup.classList.add("hidden");
+    }
+  });
+</script>
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  lucide.createIcons();
+</script>
+
+
+
+
+
+</body>
+
+</html>
