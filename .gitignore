@@ -1,1 +1,17 @@
-/node_modules
+# Dependencies
+node_modules/
+
+# Build output folders (if using Tailwind CLI or build tools later)
+dist/
+build/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Logs
+*.log
